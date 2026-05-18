@@ -1,30 +1,31 @@
 # RetroGame Craft API
 
-A **RetroGame Craft API** é uma solução backend desenvolvida para gerenciar oficinas especializadas na manutenção, restauração e modificação de consoles de videogame clássicos (como *NES, Master System, Mega Drive, Playstation 1*, entre outros). 
-
-A API permite controlar o fluxo de ordens de serviço, gerenciar o estoque de peças de reposição raras e manter um histórico detalhado de customizações (como instalações de mods de vídeo HDMI, recaps de capacitores e reparos de carcaça).
+A **RetroGame Craft API** é um sistema completo para o gerenciamento de oficinas especializadas na manutenção, restauração e customização de consoles de videogame clássicos. A aplicação permite controlar o inventário de peças raras, gerenciar ordens de serviço e visualizar o status dos reparos através de uma interface web dinâmica.
 
 ---
 
-## Tecnologias Utilizadas
+## Tecnologias Usadas
 
-*   **Ambiente de Execução:** [Node.js](https://nodejs.org/)
-*   **Linguagem:** [TypeScript](https://www.typescriptlang.org/)
-*   **Framework Web:** [Express](https://expressjs.com/)
-*   **Ferramentas de Desenvolvimento:** `ts-node-dev` (recarregamento automático)
+O projeto foi desenvolvido utilizando as seguintes ferramentas e tecnologias:
+
+*   **Node.js**: Ambiente de execução para o JavaScript no backend.
+*   **TypeScript**: Superconjunto do JavaScript que adiciona tipagem estática ao código.
+*   **Express**: Framework web rápido e minimalista para criação das rotas e APIs.
+*   **EJS (Embedded JavaScript templates)**: Motor de visualização para renderizar páginas HTML dinâmicas no servidor.
+*   **ts-node-dev**: Ferramenta de desenvolvimento para reiniciar o servidor automaticamente a cada alteração.
 
 ---
 
-## Arquitetura e Estrutura do Projeto
+## Estrutura de Pastas
 
-O projeto segue o padrão arquitetural focado em separação de responsabilidades (Rotas, Controladores e Serviços/Repositórios):
+A arquitetura do projeto segue o padrão MVC (Model-View-Controller) para manter a separação clara de responsabilidades:
 
 ```text
 ├── src/
-│   ├── controllers/   # Regras de extração de dados da requisição e resposta HTTP
-│   ├── models/        # Definição das estruturas de dados (Interfaces/Tipos)
-│   ├── routes/        # Definição dos endpoints da API
-│   ├── services/      # Regras de negócio e manipulação dos dados (CRUD)
-│   └── server.ts      # Ponto de entrada e configuração do Express
-├── package.json
-└── tsconfig.json
+│   ├── controllers/   # Regras de negócio e controle das requisições e respostas
+│   ├── models/        # Estruturas de dados, interfaces e tipos do TypeScript
+│   ├── routes/        # Definição dos endpoints da API e rotas das páginas
+│   ├── views/         # Arquivos de template EJS para a interface do usuário
+│   └── server.ts      # Ponto de entrada do projeto e configuração do Express
+├── package.json       # Gerenciamento de dependências e scripts do projeto
+└── tsconfig.json      # Configurações do compilador TypeScript
